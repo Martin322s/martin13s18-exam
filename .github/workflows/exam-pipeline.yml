@@ -16,8 +16,8 @@ jobs:
         node-version: 18.x
         cache: 'npm'
     - name: Build the application
-      uses: npm install
+      run: npm install
     - name: Test the application
-      uses: npm run test:unit
+      run: npm run test:unit
     - name: Display SoftUni username
-      uses: echo "Martin13s18"
+      run: echo "Martin13s18"
