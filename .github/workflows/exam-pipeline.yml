@@ -1,11 +1,11 @@
-name: Node.js CI
+name: Build, Test and Deploy Node.js Application
 
 on:
   push:
     branches: [ "main" ]
 
 jobs:
-  build:
+  build-and-test:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Repo
@@ -15,3 +15,9 @@ jobs:
       with:
         node-version: 18.x
         cache: 'npm'
+    - name: Build the application
+      uses: npm install
+    - name: Test the application
+      uses: npm run test:unit
+    - name: Display SoftUni username
+      uses: echo "Martin13s18"
