@@ -1,5 +1,4 @@
 name: Build, Test and Deploy Node.js Application
-
 on:
   push:
     branches: ["main"]
